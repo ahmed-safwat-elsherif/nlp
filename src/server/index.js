@@ -33,9 +33,13 @@ const port = 8081;
 app.listen(port, function () {
     console.log(`Example app listening on port ${port}!`)
 })
+let textData = [];
+app.post('/in',(req,res)=>{
+    textData = req.body.text;
+})
 app.get('/test', function(req, res) {
     textapi.sentiment({
-        'text': 'John is a very good football player!' //Will update to client input later
+        'text': textData, //Will update to client input later
     }, function (error,response) {
         if (error === null) {
             console.log(response)

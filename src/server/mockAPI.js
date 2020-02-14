@@ -1,7 +1,6 @@
-let json = {
-    'title': 'test json response',
-    'message': 'this is a message',
-    'time': 'now'
-}
-
-module.exports = json
+const mockAPIResponse = {
+    polarity : 'positive',
+    subjectivity: 'test',
+    text: 'this is a test text'
+};
+module.exports=mockAPIResponse;
